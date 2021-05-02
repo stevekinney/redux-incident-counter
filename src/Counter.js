@@ -1,4 +1,4 @@
-const Counter = () => {
+export const Counter = () => {
   return (
     <main className="Counter">
       <h1>Days Since Last Incident</h1>
@@ -12,6 +12,4 @@ const Counter = () => {
   );
 };
 
-const Application = () => <Counter />;
-
-export default Application;
+export default Counter;
