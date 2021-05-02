@@ -47,7 +47,7 @@ form {
   }
 }
 
-main {
+.Counter {
   border: 5px solid lighten($primary-color, 40%);
   font-weight: 700;
   margin: 2em auto;
@@ -55,8 +55,12 @@ main {
   width: 600px;
 }
 
-header {
+.count {
+  font-size: 8em;
   text-align: center;
-  padding: 0.5em;
-  background-color: lighten($primary-color, 30%);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
 }
