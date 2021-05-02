@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { set } from './actions';
+import { useCounter } from './use-counter';
 
 export const SetCounter = () => {
-  const countFromStore = useSelector((state) => state.count);
+  const { count: countFromStore, set } = useCounter();
   const [count, setCount] = useState(0);
-  const dispatch = useDispatch();
 
   useEffect(() => {
     setCount(countFromStore);
@@ -16,7 +14,7 @@ export const SetCounter = () => {
       <form
         onSubmit={(event) => {
           event.preventDefault();
-          dispatch(set(count));
+          set(count);
         }}
       >
         <label htmlFor="set-to">Set Count</label>
