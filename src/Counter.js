@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { decrement, increment, set } from './actions';
-
+import { SetCounter } from './SetCounter';
 export const Counter = () => {
   const incident = 'Incident';
   /**A hook to access the redux store's state. This hook takes a selector function as an argument. The selector is called with the store state. */
@@ -18,6 +18,7 @@ export const Counter = () => {
         <button onClick={() => dispatch(set(0))}>Reset</button>
         <button onClick={() => dispatch(decrement())}>Decrement</button>
       </section>
+      <SetCounter />
     </main>
   );
 };
